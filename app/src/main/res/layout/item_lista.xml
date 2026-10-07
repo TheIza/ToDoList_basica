@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
 
-    <?xml version="1.0" encoding="utf-8"?>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:orientation="horizontal"
         android:background="@color/apartados"
+        android:orientation="horizontal"
 
-        >
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -27,6 +31,7 @@
                 android:layout_height="45dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/apartados"
                 android:paddingStart="0dp"
                 android:paddingTop="0dp"
                 android:paddingEnd="0dp"
@@ -34,12 +39,10 @@
                 android:text="🗑️"
                 android:textAlignment="center"
                 android:textSize="24sp"
-                app:cornerRadius="22.5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tv_TextoTarea"
+                app:layout_constraintStart_toEndOf="@+id/pt_TextoTarea"
                 app:layout_constraintTop_toTopOf="parent"
-                android:background="@color/rojo"
 
                 />
 
@@ -49,17 +52,18 @@
                 android:layout_height="45dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="5dp"
+                android:buttonTint="@color/white"
                 android:foregroundGravity="center"
                 android:padding="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/tv_TextoTarea"
+                app:layout_constraintEnd_toStartOf="@+id/pt_TextoTarea"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:buttonTint="@color/white"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_TextoTarea"
+
+
+            <EditText
+                android:id="@+id/pt_TextoTarea"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="5dp"
@@ -67,8 +71,8 @@
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
 
-                android:gravity="center_vertical"
-                android:text="Texto de la tarea"
+                android:gravity="center|start"
+                android:text="Texto de la tarea..."
                 android:textAlignment="textStart"
                 android:textColor="@color/white"
                 android:textSize="16sp"
